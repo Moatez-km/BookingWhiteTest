@@ -1,0 +1,39 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+xmlns:tns="http://www.tekup.de/soap/models/whitetest"
+targetNamespace="http://www.tekup.de/soap/models/whitetest" elementFormDefault="qualified">
+ 
+    <xsd:element name="StudentRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="studentId" type="xsd:int"/>
+                <xsd:element name="examCode" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+ 
+    <xsd:element name="WhiteTestResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="student" type="tns:Student"/>
+                <xsd:element name="exam" type="tns:Exam"/>
+                <xsd:element name="date" type="xsd:dateTime"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+ 
+    <xsd:complexType name="Student">
+        <xsd:sequence>
+			<xsd:element name="id" type="xsd:int"/>
+            <xsd:element name="name" type="xsd:string"/>
+            <xsd:element name="address" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+	
+	<xsd:complexType name="Exam">
+        <xsd:sequence>
+			<xsd:element name="code" type="xsd:string"/>
+            <xsd:element name="name" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+     
+</xsd:schema>
