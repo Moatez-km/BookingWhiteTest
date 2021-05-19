@@ -25,8 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="studentId" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="examCode" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="examList" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -37,54 +36,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "studentId",
-    "examCode"
+    "examList"
 })
-@XmlRootElement(name = "StudentRequest")
-public class StudentRequest {
+@XmlRootElement(name = "ExamRequest")
+public class ExamRequest {
 
-    protected int studentId;
     @XmlElement(required = true)
-    protected String examCode;
+    protected String examList;
 
     /**
-     * Obtient la valeur de la propriété studentId.
-     * 
-     */
-    public int getStudentId() {
-        return studentId;
-    }
-
-    /**
-     * Définit la valeur de la propriété studentId.
-     * 
-     */
-    public void setStudentId(int value) {
-        this.studentId = value;
-    }
-
-    /**
-     * Obtient la valeur de la propriété examCode.
+     * Obtient la valeur de la propriété examList.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getExamCode() {
-        return examCode;
+    public String getExamList() {
+        return examList;
     }
 
     /**
-     * Définit la valeur de la propriété examCode.
+     * Définit la valeur de la propriété examList.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setExamCode(String value) {
-        this.examCode = value;
+    public void setExamList(String value) {
+        this.examList = value;
     }
 
 }

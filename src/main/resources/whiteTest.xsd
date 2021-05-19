@@ -10,6 +10,14 @@ targetNamespace="http://www.tekup.de/soap/models/whitetest" elementFormDefault="
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
+    <xsd:element name="ExamRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+              
+                <xsd:element name="examList" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
  
     <xsd:element name="WhiteTestResponse">
         <xsd:complexType>
@@ -21,11 +29,20 @@ targetNamespace="http://www.tekup.de/soap/models/whitetest" elementFormDefault="
         </xsd:complexType>
     </xsd:element>
  
+   <xsd:element name="ExamResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                
+                <xsd:element name="exam" type="tns:Exam" maxOccurs="unbounded"/>
+
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
     <xsd:complexType name="Student">
         <xsd:sequence>
 			<xsd:element name="id" type="xsd:int"/>
             <xsd:element name="name" type="xsd:string"/>
-            <xsd:element name="address" type="xsd:string"/>
+            <xsd:element name="address" type="tns:address"/>
         </xsd:sequence>
     </xsd:complexType>
 	
@@ -33,6 +50,14 @@ targetNamespace="http://www.tekup.de/soap/models/whitetest" elementFormDefault="
         <xsd:sequence>
 			<xsd:element name="code" type="xsd:string"/>
             <xsd:element name="name" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+     
+     <xsd:complexType name="address">
+        <xsd:sequence>
+			<xsd:element name="city" type="xsd:string"/>
+            <xsd:element name="street" type="xsd:string"/>
+            <xsd:element name="poste-code" type="xsd:string"/>
         </xsd:sequence>
     </xsd:complexType>
      

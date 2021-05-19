@@ -2,7 +2,7 @@
 // Ce fichier a été généré par l'implémentation de référence JavaTM Architecture for XML Binding (JAXB), v2.2.7 
 // Voir <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
-// Généré le : 2021.05.19 à 05:37:21 PM WAT 
+// Généré le : 2021.05.19 à 08:21:33 PM WAT 
 //
 
 
@@ -37,11 +37,35 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ExamRequest }
+     * 
+     */
+    public ExamRequest createExamRequest() {
+        return new ExamRequest();
+    }
+
+    /**
      * Create an instance of {@link StudentRequest }
      * 
      */
     public StudentRequest createStudentRequest() {
         return new StudentRequest();
+    }
+
+    /**
+     * Create an instance of {@link ExamResponse }
+     * 
+     */
+    public ExamResponse createExamResponse() {
+        return new ExamResponse();
+    }
+
+    /**
+     * Create an instance of {@link Exam }
+     * 
+     */
+    public Exam createExam() {
+        return new Exam();
     }
 
     /**
@@ -61,11 +85,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Exam }
+     * Create an instance of {@link Address }
      * 
      */
-    public Exam createExam() {
-        return new Exam();
+    public Address createAddress() {
+        return new Address();
     }
 
 }
